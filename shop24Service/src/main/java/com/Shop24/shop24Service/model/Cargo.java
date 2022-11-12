@@ -1,13 +1,12 @@
 package com.Shop24.shop24Service.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@Table(name = "cargo_details")
 public class Cargo {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long cargoId;
     private String cargoName;
     private Long cargoLocation;

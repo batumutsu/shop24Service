@@ -3,13 +3,12 @@ package com.Shop24.shop24Service.controller;
 import com.Shop24.shop24Service.model.Cargo;
 import com.Shop24.shop24Service.model.Client;
 import com.Shop24.shop24Service.service.ClientService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@RestController
+@RequestMapping("/client")
 public class ClientController {
 
     ClientService clientService;

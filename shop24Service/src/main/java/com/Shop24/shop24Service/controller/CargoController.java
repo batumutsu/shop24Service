@@ -3,13 +3,13 @@ package com.Shop24.shop24Service.controller;
 import com.Shop24.shop24Service.model.Cargo;
 import com.Shop24.shop24Service.model.Drinks;
 import com.Shop24.shop24Service.service.CargoService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.sql.Date;
 import java.util.List;
 
+@RestController
+@RequestMapping("/cargo")
 public class CargoController {
 
     CargoService cargoService;

@@ -1,24 +1,23 @@
 package com.Shop24.shop24Service.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@Table(name = "drinks_details")
 public class Drinks {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long drinkId;
-    private String drinkDescription;
+    private String drinkName;
     private Long drinkPrice;
     private Boolean isInStock;
 
     public Drinks() {
     }
 
-    public Drinks(Long drinkId, String drinkDescription, Long drinkPrice, Boolean isInStock) {
+    public Drinks(Long drinkId, String drinkName, Long drinkPrice, Boolean isInStock) {
         this.drinkId = drinkId;
-        this.drinkDescription = drinkDescription;
+        this.drinkName = drinkName;
         this.drinkPrice = drinkPrice;
         this.isInStock = isInStock;
     }
@@ -31,12 +30,12 @@ public class Drinks {
         this.drinkId = drinkId;
     }
 
-    public String getDrinkDescription() {
-        return drinkDescription;
+    public String getDrinkName() {
+        return drinkName;
     }
 
-    public void setDrinkDescription(String drinkDescription) {
-        this.drinkDescription = drinkDescription;
+    public void setDrinkName(String drinkName) {
+        this.drinkName = drinkName;
     }
 
     public Long getDrinkPrice() {

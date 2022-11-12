@@ -4,6 +4,8 @@ import com.Shop24.shop24Service.model.Order;
 import com.Shop24.shop24Service.service.OrderService;
 import org.springframework.web.bind.annotation.*;
 
+@RestController
+@RequestMapping("/order")
 public class OrderController {
 
     OrderService orderService;

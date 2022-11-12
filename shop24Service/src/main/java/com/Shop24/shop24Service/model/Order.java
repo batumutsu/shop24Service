@@ -1,13 +1,12 @@
 package com.Shop24.shop24Service.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.sql.Date;
 @Entity
+@Table(name = "order_details")
 public class Order {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long rowNo;
     private Long orderId;
     private Long clientId;
