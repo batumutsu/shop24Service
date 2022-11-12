@@ -1,6 +1,13 @@
 package com.Shop24.shop24Service.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class Client {
+    @Id
+    @GeneratedValue
     private Long clientId;
     private String clientName;
     private String clientMobNo;

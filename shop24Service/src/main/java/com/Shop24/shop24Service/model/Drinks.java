@@ -1,6 +1,13 @@
 package com.Shop24.shop24Service.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class Drinks {
+    @Id
+    @GeneratedValue
     private Long drinkId;
     private String drinkDescription;
     private Long drinkPrice;
