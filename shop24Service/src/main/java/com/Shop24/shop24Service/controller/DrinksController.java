@@ -31,7 +31,7 @@ public class DrinksController {
         return drinksService.getAvailableDrinksAndCargo();
     }
 
-    @GetMapping("{drinkId}")
+    @GetMapping("/{drinkId}")
     public Drinks getDrinkDetails(@PathVariable("drinkId") Long drinkId){
         return drinksService.getDrinkDetails(drinkId);
     }

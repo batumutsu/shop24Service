@@ -7,17 +7,17 @@ import javax.persistence.*;
 public class Client {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long clientId;
+    private String clientId;
     private String clientName;
     private String clientMobNo;
     private String clientEmail;
-    private Long clientLocation;
-    private Long clientType;
+    private String clientLocation;
+    private String clientType;
 
     public Client() {
     }
 
-    public Client(Long clientId, String clientName, String clientMobNo, String clientEmail, Long clientLocation, Long clientType) {
+    public Client(String clientId, String clientName, String clientMobNo, String clientEmail, String clientLocation, String clientType) {
         this.clientId = clientId;
         this.clientName = clientName;
         this.clientMobNo = clientMobNo;
@@ -26,11 +26,11 @@ public class Client {
         this.clientType = clientType;
     }
 
-    public Long getClientId() {
+    public String getClientId() {
         return clientId;
     }
 
-    public void setClientId(Long clientId) {
+    public void setClientId(String clientId) {
         this.clientId = clientId;
     }
 
@@ -58,19 +58,19 @@ public class Client {
         this.clientEmail = clientEmail;
     }
 
-    public Long getClientLocation() {
+    public String getClientLocation() {
         return clientLocation;
     }
 
-    public void setClientLocation(Long clientLocation) {
+    public void setClientLocation(String clientLocation) {
         this.clientLocation = clientLocation;
     }
 
-    public Long getClientType() {
+    public String getClientType() {
         return clientType;
     }
 
-    public void setClientType(Long clientType) {
+    public void setClientType(String clientType) {
         this.clientType = clientType;
     }
 }

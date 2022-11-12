@@ -7,12 +7,12 @@ import java.sql.Date;
 public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long rowNo;
-    private Long orderId;
-    private Long clientId;
-    private Long drinkId;
-    private Long cargoId;
-    private Long drinkPrice;
+    private String rowNo;
+    private String orderId;
+    private String clientId;
+    private String drinkId;
+    private String cargoId;
+    private String drinkPrice;
     private Boolean isPaid;
     private Boolean isComplete;
     private Date insertDate;
@@ -21,7 +21,7 @@ public class Order {
     public Order() {
     }
 
-    public Order(Long rowNo, Long orderId, Long clientId, Long drinkId, Long cargoId, Long drinkPrice, Boolean isPaid, Boolean isComplete, Date insertDate, Date orderCompletedDate) {
+    public Order(String rowNo, String orderId, String clientId, String drinkId, String cargoId, String drinkPrice, Boolean isPaid, Boolean isComplete, Date insertDate, Date orderCompletedDate) {
         this.rowNo = rowNo;
         this.orderId = orderId;
         this.clientId = clientId;
@@ -34,51 +34,51 @@ public class Order {
         this.orderCompletedDate = orderCompletedDate;
     }
 
-    public Long getRowNo() {
+    public String getRowNo() {
         return rowNo;
     }
 
-    public void setRowNo(Long rowNo) {
+    public void setRowNo(String rowNo) {
         this.rowNo = rowNo;
     }
 
-    public Long getOrderId() {
+    public String getOrderId() {
         return orderId;
     }
 
-    public void setOrderId(Long orderId) {
+    public void setOrderId(String orderId) {
         this.orderId = orderId;
     }
 
-    public Long getClientId() {
+    public String getClientId() {
         return clientId;
     }
 
-    public void setClientId(Long clientId) {
+    public void setClientId(String clientId) {
         this.clientId = clientId;
     }
 
-    public Long getDrinkId() {
+    public String getDrinkId() {
         return drinkId;
     }
 
-    public void setDrinkId(Long drinkId) {
+    public void setDrinkId(String drinkId) {
         this.drinkId = drinkId;
     }
 
-    public Long getCargoId() {
+    public String getCargoId() {
         return cargoId;
     }
 
-    public void setCargoId(Long cargoId) {
+    public void setCargoId(String cargoId) {
         this.cargoId = cargoId;
     }
 
-    public Long getDrinkPrice() {
+    public String getDrinkPrice() {
         return drinkPrice;
     }
 
-    public void setDrinkPrice(Long drinkPrice) {
+    public void setDrinkPrice(String drinkPrice) {
         this.drinkPrice = drinkPrice;
     }
 

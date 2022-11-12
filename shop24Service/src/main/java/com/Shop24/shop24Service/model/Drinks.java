@@ -7,26 +7,26 @@ import javax.persistence.*;
 public class Drinks {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long drinkId;
+    private String drinkId;
     private String drinkName;
-    private Long drinkPrice;
+    private String drinkPrice;
     private Boolean isInStock;
 
     public Drinks() {
     }
 
-    public Drinks(Long drinkId, String drinkName, Long drinkPrice, Boolean isInStock) {
+    public Drinks(String drinkId, String drinkName, String drinkPrice, Boolean isInStock) {
         this.drinkId = drinkId;
         this.drinkName = drinkName;
         this.drinkPrice = drinkPrice;
         this.isInStock = isInStock;
     }
 
-    public Long getDrinkId() {
+    public String getDrinkId() {
         return drinkId;
     }
 
-    public void setDrinkId(Long drinkId) {
+    public void setDrinkId(String drinkId) {
         this.drinkId = drinkId;
     }
 
@@ -38,11 +38,11 @@ public class Drinks {
         this.drinkName = drinkName;
     }
 
-    public Long getDrinkPrice() {
+    public String getDrinkPrice() {
         return drinkPrice;
     }
 
-    public void setDrinkPrice(Long drinkPrice) {
+    public void setDrinkPrice(String drinkPrice) {
         this.drinkPrice = drinkPrice;
     }
 

@@ -7,26 +7,26 @@ import javax.persistence.*;
 public class Cargo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long cargoId;
+    private String cargoId;
     private String cargoName;
-    private Long cargoLocation;
+    private String cargoLocation;
     private Boolean isActive;
 
     public Cargo() {
     }
 
-    public Cargo(Long cargoId, String cargoName, Long cargoLocation, Boolean isActive) {
+    public Cargo(String cargoId, String cargoName, String cargoLocation, Boolean isActive) {
         this.cargoId = cargoId;
         this.cargoName = cargoName;
         this.cargoLocation = cargoLocation;
         this.isActive = isActive;
     }
 
-    public Long getCargoId() {
+    public String getCargoId() {
         return cargoId;
     }
 
-    public void setCargoId(Long cargoId) {
+    public void setCargoId(String cargoId) {
         this.cargoId = cargoId;
     }
 
@@ -38,11 +38,11 @@ public class Cargo {
         this.cargoName = cargoName;
     }
 
-    public Long getCargoLocation() {
+    public String getCargoLocation() {
         return cargoLocation;
     }
 
-    public void setCargoLocation(Long cargoLocation) {
+    public void setCargoLocation(String cargoLocation) {
         this.cargoLocation = cargoLocation;
     }
 
