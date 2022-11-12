@@ -4,10 +4,11 @@ import com.Shop24.shop24Service.model.Cargo;
 import com.Shop24.shop24Service.model.Drinks;
 import com.Shop24.shop24Service.repository.CargoRepository;
 import com.Shop24.shop24Service.service.CargoService;
+import org.springframework.stereotype.Service;
 
 import java.sql.Date;
 import java.util.List;
-
+@Service
 public class CargoServiceImpl implements CargoService {
 
     CargoRepository cargoRepository;

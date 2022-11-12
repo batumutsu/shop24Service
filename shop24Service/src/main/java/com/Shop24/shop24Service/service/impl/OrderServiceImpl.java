@@ -3,7 +3,9 @@ package com.Shop24.shop24Service.service.impl;
 import com.Shop24.shop24Service.model.Order;
 import com.Shop24.shop24Service.repository.OrderRepository;
 import com.Shop24.shop24Service.service.OrderService;
+import org.springframework.stereotype.Service;
 
+@Service
 public class OrderServiceImpl implements OrderService {
 
     OrderRepository orderRepository;

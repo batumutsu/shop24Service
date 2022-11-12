@@ -3,9 +3,10 @@ package com.Shop24.shop24Service.service.impl;
 import com.Shop24.shop24Service.model.Drinks;
 import com.Shop24.shop24Service.repository.DrinksRepository;
 import com.Shop24.shop24Service.service.DrinksService;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class DrinksServiceImpl implements DrinksService {
 
     DrinksRepository drinksRepository;
