@@ -3,6 +3,7 @@ package com.Shop24.shop24Service.controller;
 import com.Shop24.shop24Service.model.Cargo;
 import com.Shop24.shop24Service.model.Client;
 import com.Shop24.shop24Service.service.ClientService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -11,6 +12,7 @@ import java.util.List;
 @RequestMapping("/client")
 public class ClientController {
 
+    @Autowired
     ClientService clientService;
 
     public ClientController(ClientService clientService) {
@@ -23,7 +25,7 @@ public class ClientController {
     }
 
     @GetMapping("{clientId}")
-    public Client getClientDetails(@PathVariable("clientId") Long clientId) {
+    public Client getClientDetails(@PathVariable("clientId") String clientId) {
         return clientService.getClientDetails(clientId);
     }
 
@@ -33,7 +35,7 @@ public class ClientController {
     }
 
     @PostMapping("/createClientDetails")
-    public Client createClientDetails(@RequestBody Client client) {
+    public String createClientDetails(@RequestBody Client client) {
         return clientService.createClientDetails(client);
     }
 

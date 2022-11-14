@@ -1,12 +1,17 @@
 package com.Shop24.shop24Service.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name = "client_details")
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class Client {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    //@JsonIgnore
     private String clientId;
     private String clientName;
     private String clientMobNo;

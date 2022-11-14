@@ -2,15 +2,18 @@ package com.Shop24.shop24Service.controller;
 
 import com.Shop24.shop24Service.model.Drinks;
 import com.Shop24.shop24Service.service.DrinksService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 @RestController
 @RequestMapping("/drinks")
 public class DrinksController {
 
+    @Autowired
     DrinksService drinksService;
     public DrinksController(DrinksService drinksService) {
         this.drinksService = drinksService;
@@ -26,13 +29,13 @@ public class DrinksController {
         return drinksService.getMostConsumedDrinks();
     }
 
-    @GetMapping("/getAvailableDrinksAndCargo")
-    public List<Drinks> getAvailableDrinksAndCargo() {
-        return drinksService.getAvailableDrinksAndCargo();
+    @GetMapping("/getAvailableDrinksAndCargo/{clientId}")
+    public List<Drinks> getAvailableDrinksAndCargo(@PathVariable("clientId") String clientId) {
+        return drinksService.getAvailableDrinksAndCargo(clientId);
     }
 
-    @GetMapping("/{drinkId}")
-    public Drinks getDrinkDetails(@PathVariable("drinkId") Long drinkId){
+    @GetMapping("{drinkId}")
+    public Drinks getDrinkDetails(@PathVariable("drinkId") String drinkId){
         return drinksService.getDrinkDetails(drinkId);
     }
 

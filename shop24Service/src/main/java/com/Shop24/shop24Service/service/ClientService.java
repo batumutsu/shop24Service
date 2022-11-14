@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface ClientService {
     public List<Client> getAllClients();
-    public Client getClientDetails(Long clientId);
+    public Client getClientDetails(String clientId);
     public List<Cargo> getClientClosestCargo(Long clientId);
-    public Client createClientDetails(Client client);
+    public String createClientDetails(Client client);
 }
